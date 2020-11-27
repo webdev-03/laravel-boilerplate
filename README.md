@@ -8,20 +8,20 @@ Laravel boilerplate contains all the required configuration and database schema 
 ```
 it will load all the required packages.
 
-|         ## CDN's         |
-|:------------------------:|
-|  - [x] AdminLTE 3        |
-|  - [x] FontAwesome       |
-|  - [x] JQuery            |
-|  - [x] DataTables        |
-|  - [x] OverlayScrollbar  |
-|  - [x] Select2           |
-|  - [x] Toastr            |
-|  - [x] Ionicons          |
-|  - [x] Google Fonts      |
-|  - [x] Popper JS         |
-|  - [x] Bootstrap JS      |
-|  - [x] Chart JS          |
+|      CDN's           |        Dependencies           |
+|:--------------------:|:-----------------------------:|
+|    AdminLTE 3        |    barryvdh/laravel-debugbar  |
+|    FontAwesome       |    laravel/ui                 |
+|    JQuery            |    maatwebsite/excel          |
+|    DataTables        |    orangehill/iseed           |
+|    OverlayScrollbar  |    spatie/laravel-permission  |
+|    Select2           |    sven/artisan-view          |
+|    Toastr            |    yajra/laravel-datatables   |
+|    Ionicons          |                               |
+|    Google Fonts      |                               |
+|    Popper JS         |                               |
+|    Bootstrap JS      |                               |
+|    Chart JS          |                               |
 
 ## License
 
