@@ -8,6 +8,25 @@ Laravel boilerplate contains all the required configuration and database schema 
 ```
 It will load all the required packages.
 
+### Steps to reproduce.
+
+* Copy the .env.example to .env
+* Make the nesseary changes to .env
+* Run this command to migrate database
+```php
+    php artisan migrate:fresh --seed
+```
+
+## Default UserID Password
+
+Email - [gulgulia17@gmail.com](mailto:gulgulia17@gmail.com)
+Number - [8890070352](call:8890070352)
+Username - gulgulia17
+Password - 12345678
+
+
+-- You can log in with any of the ones it can be either Email, Number, Username
+
 ## Used Dependencies, CDN, Packages
 
 |      CDN's           |        Dependencies           |
@@ -28,7 +47,7 @@ It will load all the required packages.
 
 ## Available Artisan Commands
 
-All the default artisan command are available and some additional command are available to with the used packages
+All the default artisan command are available and some additional command is available too with the used packages
 
 * [laravel/ui](https://github.com/laravel/ui)
     // Generate basic scaffolding...
