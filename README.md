@@ -19,10 +19,10 @@ It will load all the required packages.
 
 ## Default UserID Password
 
-Email - [gulgulia17@gmail.com](mailto:gulgulia17@gmail.com)
-Number - [8890070352](call:8890070352)
-Username - gulgulia17
-Password - 12345678
+* Email - [gulgulia17@gmail.com](mailto:gulgulia17@gmail.com)
+* Number - [8890070352](tel:+918890070352)
+* Username - gulgulia17
+* Password - 12345678
 
 
 -- You can log in with any of the ones it can be either Email, Number, Username
