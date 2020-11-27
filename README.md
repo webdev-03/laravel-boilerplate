@@ -1,6 +1,6 @@
 # laravel-boilerplate 💯
 
-This package provides you with a simple goback button to use on your blade files. It will let you focus on the development and will handle the back button functionality.
+Laravel boilerplate contains all the required configuration and database schema with a seeder and integrated AdminLTE 3 layout for admin to kickStart the project.
 
 ## Installation
 ```php
