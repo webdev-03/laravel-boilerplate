@@ -42,11 +42,28 @@ All the default artisan command are available and some additional command are av
     * php artisan ui react --auth
     
 * maatwebsite/excel
+    * php artisan make:export UsersExport --model=User
+    * php artisan make:import UsersImport --model=User
+    
 * orangehill/iseed
+    * php artisan iseed tablename,tablename2
+    
 * spatie/laravel-permission
-* sven/artisan-view
-* yajra/laravel-datatables
+    * php artisan permission:cache-reset
+    * php artisan permission:create-permission
+    * php artisan permission:create-role
+    * php artisan permission:show
 
+* sven/artisan-view
+    * php artisan make:view home
+    * php artisan scrap:view home
+    
+* yajra/laravel-datatables
+    * php artisan datatables:editor ClassName
+    * php artisan datatables:html ClassName
+    * php artisan datatables:make ClassName
+    * php artisan datatables:scope ClassName
+    
 ## Requirements
 
 - [ ] PHP: ^7.2\|^8.0
