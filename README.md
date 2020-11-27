@@ -58,7 +58,7 @@ All the default artisan command are available and some additional command are av
     * php artisan make:view home
     * php artisan scrap:view home
     
-* yajra/laravel-datatables
+* [yajra/laravel-datatables](https://yajrabox.com/docs/laravel-datatables/master/installation)
     * php artisan datatables:editor ClassName
     * php artisan datatables:html ClassName
     * php artisan datatables:make ClassName
