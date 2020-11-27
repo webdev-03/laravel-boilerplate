@@ -30,31 +30,31 @@ It will load all the required packages.
 
 All the default artisan command are available and some additional command are available to with the used packages
 
-* laravel/ui
-    * // Generate basic scaffolding...
+* [laravel/ui](https://github.com/laravel/ui)
+    // Generate basic scaffolding...
     * php artisan ui bootstrap
     * php artisan ui vue
     * php artisan ui react
-    * 
-    * // Generate login / registration scaffolding...
+     
+    // Generate login / registration scaffolding...
     * php artisan ui bootstrap --auth
     * php artisan ui vue --auth
     * php artisan ui react --auth
     
-* maatwebsite/excel
+* [maatwebsite/excel](https://docs.laravel-excel.com/3.1/getting-started/)
     * php artisan make:export UsersExport --model=User
     * php artisan make:import UsersImport --model=User
     
-* orangehill/iseed
+* [orangehill/iseed](https://github.com/orangehill/iseed)
     * php artisan iseed tablename,tablename2
     
-* spatie/laravel-permission
+* [spatie/laravel-permission](https://spatie.be/docs/laravel-permission/v3/introduction)
     * php artisan permission:cache-reset
     * php artisan permission:create-permission
     * php artisan permission:create-role
     * php artisan permission:show
 
-* sven/artisan-view
+* [sven/artisan-view](https://github.com/svenluijten/artisan-view)
     * php artisan make:view home
     * php artisan scrap:view home
     
