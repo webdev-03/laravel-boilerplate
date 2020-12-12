@@ -37,7 +37,7 @@
                  <form action="{{ route('login') }}" method="post">
                      @csrf
                      <div class="input-group mb-3">
-                         <input type="text" name="username" class="form-control @error('username') is-invalid @enderror @error('email') is-invalid @enderror"
+                         <input type="text" name="email" class="form-control @error('username') is-invalid @enderror @error('email') is-invalid @enderror"
                              value="{{ old('username') }}" placeholder="Username" autofocus>
                          <div class="input-group-append">
                              <div class="input-group-text">

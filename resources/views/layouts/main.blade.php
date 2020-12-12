@@ -53,6 +53,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.5/js/adminlte.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
     @if (env('APP_DEBUG') != 'true')
         <script>
