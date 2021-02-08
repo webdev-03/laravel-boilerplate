@@ -2,12 +2,12 @@
 
 namespace App\DataTables;
 
+use App\Models\User;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
-use Spatie\Permission\Models\Role;
 use Yajra\DataTables\Services\DataTable;
 
-class RolesDataTable extends DataTable
+class UserDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -19,24 +19,25 @@ class RolesDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->editColumn('created_at', function ($model) {
-                return $model->created_at->diffForHumans();
+            ->editColumn('roles.name', function ($model) {
+                $temp = [];
+                foreach ($model->roles as $role) {
+                    $temp[] = $role->name;
+                }
+                return implode(',', $temp);
             })
-            ->editColumn('updated_at', function ($model) {
-                return $model->updated_at->diffForHumans();
-            })
-            ->addColumn('action', 'admin.roles.action');
+            ->addColumn('action', 'admin.user.action');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \Spatie\Permission\Models\Role $model
+     * @param \App\Models\User $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Role $model)
+    public function query(User $model)
     {
-        return $model->newQuery();
+        return $model->with('roles:id,name')->newQuery();
     }
 
     /**
@@ -47,10 +48,11 @@ class RolesDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-            ->setTableId('roles-table')
+            ->setTableId('user-table')
             ->columns($this->getColumns())
             ->minifiedAjax()
             ->dom("<'row'<'col-md-6'B><'col-md-6'f>><'row'<'col-md-12'tr>><'row'<'col-md-6'l><'col-md-6'p>>")
+            ->initComplete("function(settings, json) { $('.multiSelect').select2(); }")
             ->orderBy(0, 'asc')
             ->buttons(
                 Button::make('reload')
@@ -67,9 +69,8 @@ class RolesDataTable extends DataTable
         return [
             Column::make('id'),
             Column::make('name'),
-            Column::make('guard_name'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            Column::make('email'),
+            Column::make('roles.name')->title('Roles'),
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
@@ -85,6 +86,6 @@ class RolesDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'Roles_' . date('YmdHis');
+        return 'User_' . date('YmdHis');
     }
 }

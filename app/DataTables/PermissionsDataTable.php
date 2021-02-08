@@ -5,8 +5,6 @@ namespace App\DataTables;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Spatie\Permission\Models\Permission;
-use Yajra\DataTables\Html\Editor\Editor;
-use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
 class PermissionsDataTable extends DataTable
@@ -55,8 +53,6 @@ class PermissionsDataTable extends DataTable
             ->dom("<'row'<'col-md-6'B><'col-md-6'f>><'row'<'col-md-12'tr>><'row'<'col-md-6'l><'col-md-6'p>>")
             ->orderBy(0, 'asc')
             ->buttons(
-                Button::make('excel'),
-                Button::make('create'),
                 Button::make('reload')
             );
     }
