@@ -85,8 +85,8 @@ All the default artisan command are available and some additional command is ava
     
 ## Requirements
 
-- [ ] PHP: ^7.2\|^8.0
-- [ ] Laravel: ^5.8
+- [ ] PHP: ^8.1
+- [ ] Laravel: ^10.0
 - [ ] PhpSpreadsheet: ^1.15
 - [ ] PHP extension php_zip enabled
 - [ ] PHP extension php_xml enabled

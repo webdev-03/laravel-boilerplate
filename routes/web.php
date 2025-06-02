@@ -1,7 +1,12 @@
 <?php
+declare(strict_types=1);
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
 
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::group(['middleware' => ['auth', 'allowed']], function () {
-    Route::get('/', 'HomeController@index');
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::group(['namespace' => 'Admin'], function () {
-        Route::resource('permission', 'PermissionController');
-        Route::resource('role', 'RoleController');
-        Route::resource('user', 'UserController');
-    });
+Route::middleware(['auth', 'allowed'])->group(function () {
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::resource('permission', PermissionController::class);
+    Route::resource('role', RoleController::class);
+    Route::resource('user', UserController::class);
 });
