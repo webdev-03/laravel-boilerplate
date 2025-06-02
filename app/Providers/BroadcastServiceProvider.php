@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Providers;
 
@@ -12,7 +13,7 @@ class BroadcastServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Broadcast::routes();
 
